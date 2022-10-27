@@ -2,19 +2,20 @@ package com.example.mvc_1ejemplo_donaciones;
 
 public class DonationModel {
 
-    // modelo tiene la logica del negocio
-    // 1.Monto acumulado
+    // MODELO TIENE LA LÓGICA DEL NEGOCIO / EN ESTE CASO GUARDAR UNA DONACIÓN Y LAS SUMA AL TOTAL
+    // 1.DECLARAMOS VARIABLE QUE HACE REFRENCIA AL DATO DE ENTRADA
     private int donationAmount;
 
-    // 2-Constructor Para recibir monedas
+    // 2-CONSTRUCTOR CON PARAMETROS DONATIONMODEL SE CONTRUYE POR MEDIO DE UNA DONACIÓN
     public DonationModel(int donationAmount) {
         this.donationAmount = donationAmount;
     }
 
+    // INICIALIZAMOS LA DONACIÓN EN 0
     public DonationModel() {
         this.donationAmount = 0;
     }
-    // 3 crear un metodo que reciba y comprobar donaciones
+    // 3 CREAMOS UN MÉTODO QUE RECIBE UNA DONACIÓN Y SE CONVIERTE EL DATO STRIN EN INT
 
     public boolean saveDonation(String donation) {
         Integer amount = Integer.valueOf(donation);
@@ -26,7 +27,7 @@ public class DonationModel {
         }
     }
 
-    // Retornar la donacion
+    // 4-MÉTODO QUE DEVUELVE EL MONTO ACUMULADO
     public int getDonationAmount() {
         return donationAmount;
     }
