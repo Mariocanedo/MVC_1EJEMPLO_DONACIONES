@@ -31,5 +31,19 @@ public class DonationModel {
         return donationAmount;
     }
 
+    // metodo que Válida las donaciones y el presentador es quien notifica a la vista
+    public String ChekAmountDonation(){
+
+        if(donationAmount >=200 && donationAmount<= 500){
+             return "#F31A1A";
+        }
+        else if(donationAmount >500 && donationAmount <=1000 ){
+            return "#FFFB33";
+        }else  {
+            return "#58FF11";
+        }
+    }
+
+
 
 }
